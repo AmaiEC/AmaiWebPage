@@ -186,57 +186,147 @@ footer {
   }
 }
 
-    @media (max-width: 480px) {
-      header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.1rem 1rem;
-        width: 100%;
-        overflow-x: hidden;
-      }
+@media (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem;
+    margin: 0rem 0rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-      .logo {
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 0.5rem;
-        margin-right: 9rem;
-        min-width: 0;
-      }
+  .logo {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.5rem;
+    margin-right: 9rem;
+    min-width: 0;
+  }
 
-      .logo img {
-        height: 36px;
-        width: auto;
-      }
+  .logo img {
+    height: 36px;
+    width: auto;
+  }
 
-      .logo strong {
-        font-size: 1.8rem;
-      }
+  .logo strong {
+    font-size: 1.8rem;
+  }
 
-      .logo small {
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-      }
+  .logo small {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
 
-      header nav {
-        display: flex;
-        gap: 6px;
-        flex-shrink: 1;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-      }
+  header nav {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
 
-      header nav a {
-        font-size: 1rem;
-        margin-left: -1rem;
-        margin-right: 2rem;
-        padding: 4px 10px;
-        border-radius: 12px;
-      }
+  header nav a {
+    font-size: 1rem;
+    margin-left: -1rem;
+    margin-right: 2rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+  }
 
-      header nav a:last-child {
-        padding: 0.3rem 1rem;
-      }
-    }
+  header nav a:last-child {
+    padding: 0.3rem 1rem;
+  }
+}
+
+/* Modal general */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 0px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Botón cerrar */
+.close {
+  color: #333;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Lista de ingredientes */
+.modal-body ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+/* Imágenes */
+.modal-images {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-images img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Video adaptado */
+.modal-video iframe {
+  width: 100%;
+  max-height: 215px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE: Pantallas pequeñas */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-images img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-body ul {
+    font-size: 0.95rem;
+  }
+
+  .close {
+    font-size: 26px;
+  }
+}

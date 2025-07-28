@@ -33,58 +33,214 @@
     </div>
   </section>
 
-  <section class="content">
-    <div class="text-block">
+  <section class="content" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+
+    <!-- Bloque izquierdo con beneficios e ingredientes -->
+    <div class="text-block" style="flex: 1; min-width: 300px;">
       <div class="benefits">
         <h3>Beneficios de valor</h3>
         <p>Nuestra crema de skincare es una solución accesible y efectiva, elaborada artesanalmente en el país. Su
           producción local permite mantener bajos costos, ofrecer precios competitivos y garantizar márgenes
           sostenibles, al tiempo que apoya la economía regional y reduce el impacto ambiental.</p>
+
+        <ul>
+          <li>Elaborado con ingredientes naturales como glicerina aloe vera.</li>
+          <li>Regenera, hidrata y protege la piel con vitamina E.</li>
+        </ul>
       </div>
+
+      <div class="value-images"
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+        <div style="text-align: center;">
+          <img src="images/accesible.jpg" alt="accesible"
+            style="width: 175px; aspect-ratio: 1 / 2; object-fit: cover; border-radius: 5%;" />
+          <p style="font-size: 0.9rem;">Accesible</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="images/artesanal.jpg" alt="Artesanal"
+            style="width: 175px; aspect-ratio: 1 / 2; object-fit: cover; border-radius: 5%;" />
+          <p style="font-size: 0.9rem;">Artesanal</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="images/ambiental.jpg" alt="Aloevera"
+            style="width: 175px; aspect-ratio: 1 / 2; object-fit: cover; border-radius: 5%;" />
+          <p style="font-size: 0.9rem;">Aloe Vera</p>
+        </div>
+      </div>
+
+      <!-- Ingredientes detallados -->
       <section id="ingredientes">
-        <div class="ingredients">
+        <div class="ingredients" style="margin-top: 2rem;">
           <h3>Ingredientes Naturales</h3>
           <p>Nuestra fórmula 100% natural hidrata, regenera y calma la piel, sin químicos agresivos, siendo ideal para
             pieles sensibles y consumidores conscientes. Además, responde a la creciente demanda de cosmética limpia y
             sostenible.</p>
+          <!-- Imágenes circulares -->
+          <div class="value-images"
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
+            <div style="text-align: center;">
+              <img src="images/glicerina.jpg" alt="Glicerina"
+                style="width: 100px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%;" />
+              <p style="font-size: 0.9rem;">Glicerina</p>
+            </div>
+            <div style="text-align: center;">
+              <img src="images/vitaminae.jpg" alt="Vitaminae"
+                style="width: 100px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%;" />
+              <p style="font-size: 0.9rem;">Vitamina E</p>
+            </div>
+            <div style="text-align: center;">
+              <img src="images/aloevera.jpg" alt="Aloevera"
+                style="width: 100px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%;" />
+              <p style="font-size: 0.9rem;">Aloe Vera</p>
+            </div>
+          </div>
           <ul>
             <li>500ml Agua destilada</li>
             <li>12 ml Base líquida</li>
             <li>10 ml Glicerina líquida</li>
             <li>5 ml Propelincol</li>
             <li>2 ml Vitamina E cosmética</li>
-            <li>0.5 g Benzuato/Sodio</li>
-            <li>0.5 g Ácido cÍtrico</li>
+            <li>0.5 g Benzoato/Sodio</li>
+            <li>0.5 g Ácido cítrico</li>
             <li>3 ml Aloe Vera</li>
           </ul>
         </div>
       </section>
     </div>
-    <div class="qr">
-      <h3>Validaciones</h3>
-      <img src="images/qr.jpg" alt="Código QR" />
+
+    <!-- Bloque QR Form -->
+    <div class="qr" style="flex: 0.5; min-width: 200px; text-align: center;">
+      <h3>Formulario</h3>
+      <p>Escanea para llenar el formulario:</p>
+      <img src="images/qr.jpg" alt="Código QR" style="width: 120px; height: 120px;" />
+      <br><br>
+      <a href="form.html">
+        <button
+          style="background-color: #4CAF50; color: white; padding: 0.6rem 1.2rem; border: none; border-radius: 20px; cursor: pointer;">Generar
+          reporte</button>
+      </a>
     </div>
+
   </section>
 
   <section class="sections">
     <div class="section">
-      <a href="#ingredientes">
+      <a href="#!" onclick="openModal()">
         <img src="images/ingredientes.jpg" alt="Ingredientes" />
         <p>INGREDIENTES</p>
       </a>
     </div>
+
+    <!-- Modal oculto por defecto -->
+    <div id="modalIngredientes" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Ingredientes Naturales</h2>
+
+        <div class="modal-body">
+          <!-- Lista de ingredientes -->
+          <ul>
+            <li>✔️ Agua destilada</li>
+            <li>✔️ Glicerina líquida</li>
+            <li>✔️ Aloe Vera</li>
+            <li>✔️ Vitamina E</li>
+            <li>✔️ Base líquida natural</li>
+          </ul>
+
+          <!-- Imágenes -->
+          <div class="value-images"
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1rem;">
+            <div style="text-align: center; max-width: 400px; margin: auto;">
+              <img src="images/GLICERINA_00.jpg" alt="accesible"
+                style="width: 100%; height: auto ; object-fit:cover; border-radius: 5%;" />
+            </div>
+            <div style="text-align: center; max-width: 400px; margin: auto;">
+              <img src="images/INGREDIENTES_00.jpg" alt="Artesanal"
+                style="width: 100%; height: auto ; object-fit:cover; border-radius: 5%;" />
+            </div>
+            <div style="text-align: center; max-width: 400px; margin: auto;">
+              <img src="images/vitamina_e.jpg" alt="Aloevera"
+                style="width: 100%; height: auto ; object-fit:cover; border-radius: 5%;" />
+            </div>
+          </div>
+
+          <!-- Video local -->
+          <div class="modal-video" style="max-width: 300px; margin: auto; margin-top: 2rem;">
+            <video style="width: 100%; height: auto; max-width: 100%; border-radius: 10px;" controls>
+              <source src="images/video.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
     <div class="section">
       <a href="form.html">
         <img src="images/diagnostico.jpg" alt="Diagnóstico" />
         <p>DIAGNÓSTICO</p>
       </a>
     </div>
+
     <div class="section">
-      <a href="form.html">
+      <a href="#!" onclick="openRutinasModal()">
         <img src="images/rutinas.jpg" alt="Rutinas" />
         <p>RUTINAS</p>
       </a>
     </div>
+
+    <!-- Modal de Rutinas -->
+    <div id="modalRutinas" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeRutinasModal()">&times;</span>
+        <h2>Rutinas Recomendadas</h2>
+
+        <div class="modal-body">
+          <!-- Rutina Día -->
+          <div class="rutina-bloque">
+            <h3>🌞 Rutina de Mañana</h3>
+            <ul>
+              <li>✔️ Limpieza suave con agua micelar o gel</li>
+              <li>✔️ Hidratante ligera</li>
+              <li>✔️ Protector solar SPF 30+</li>
+            </ul>
+            <div class="modal-images">
+              <img src="images/dia1.jpg" alt="Rutina día 1"  style="width: 35%; height: auto ; object-fit: cover; border-radius: 5%;" />
+              <img src="images/dia2.jpg" alt="Rutina día 2" style="width: 50%; height: auto ; object-fit: cover; border-radius: 5%;" />
+            </div>
+          </div>
+
+          <!-- Rutina Tarde -->
+          <div class="rutina-bloque">
+            <h3>🌤️ Rutina de Tarde</h3>
+            <ul>
+              <li>✔️ Limpieza facial si hubo exposición al sol</li>
+              <li>✔️ Hidratante calmante o mist</li>
+            </ul>
+            <div class="modal-images">
+              <img src="images/tarde1.jpg" alt="Rutina tarde 1" style="width: 50%; height: auto ; object-fit:cover; border-radius: 5%;" />
+            </div>
+          </div>
+
+          <!-- Rutina Noche -->
+          <div class="rutina-bloque">
+            <h3>🌙 Rutina de Noche</h3>
+            <ul>
+              <li>✔️ Limpieza profunda</li>
+              <li>✔️ Sérum regenerador o ácido hialurónico</li>
+              <li>✔️ Crema nutritiva nocturna</li>
+            </ul>
+            <div class="modal-images">
+              <img src="images/noche1.jpg" alt="Rutina noche 1" style="width: 50%; height: auto ; object-fit:cover; border-radius: 5%;" />
+              <img src="images/noche2.jpg" alt="Rutina noche 2" style="width: 50%; height: auto ; object-fit:cover; border-radius: 5%;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <footer id="footer" style="background-color: #0a0a0a; color: white; padding: 2rem 1rem; font-size: 0.9rem;">
@@ -118,7 +274,7 @@
         </div>
       </div>
 
-      -->   
+      -->
     </div>
 
     <!-- Línea separadora -->
@@ -131,5 +287,45 @@
     </div>
   </footer>
 </body>
+
+<script>
+  function openModal() {
+    document.getElementById("modalIngredientes").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("modalIngredientes").style.display = "none";
+  }
+
+  // Cierra el modal si haces clic fuera del contenido
+  window.onclick = function (event) {
+    const modal = document.getElementById("modalIngredientes");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  function openRutinasModal() {
+    document.getElementById("modalRutinas").style.display = "block";
+  }
+
+  function closeRutinasModal() {
+    document.getElementById("modalRutinas").style.display = "none";
+  }
+
+  // También cerrar si se hace clic fuera del contenido
+  window.onclick = function (event) {
+    const modalIngredientes = document.getElementById("modalIngredientes");
+    const modalRutinas = document.getElementById("modalRutinas");
+
+    if (event.target === modalIngredientes) {
+      modalIngredientes.style.display = "none";
+    }
+    if (event.target === modalRutinas) {
+      modalRutinas.style.display = "none";
+    }
+  }
+</script>
+
 
 </html>
